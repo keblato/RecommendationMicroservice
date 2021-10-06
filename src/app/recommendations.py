@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import linear_kernel
 
 
 
-movies=pd.read_csv('/home/ubuntu/RecommendationMicroservice/src/app/movies.csv', sep=',', encoding = 'utf-8').sample(100)
+movies=pd.read_csv('/home/ubuntu/RecommendationMicroservice/src/app/movies.csv', sep=',', encoding = 'utf-8')
 tfvector= TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
 tfidf_matrix = tfvector.fit_transform(movies['genres'])
 cosine_sim2 = linear_kernel(tfidf_matrix, tfidf_matrix)
