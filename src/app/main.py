@@ -4,7 +4,7 @@ sys.path
 from operator import ge
 from flask import Flask, jsonify, request
 import sys
-sys.path.append('/home/mobileApp/RecommendationMicroservice/src/app')
+sys.path.insert(0,'/home/mobileApp/RecommendationMicroservice/src/app')
 
 from app.invalid_usage import InvalidUsage
 from app.recommendations import genre_recommendations
