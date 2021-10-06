@@ -8,7 +8,7 @@ sys.path.insert(0,'/home/mobileApp/RecommendationMicroservice/src')
 
 from app.invalid_usage import InvalidUsage
 #from app.recommendations import genre_recommendations
-from app.validation import validate_movieId
+#from app.validation import validate_movieId
 app = Flask(__name__)
 
 
@@ -20,7 +20,7 @@ def index() -> str:
         
 @app.route("/movieR", methods=['POST'])
 def hello() -> str:
-   errors = validate_movieId(request)
+   errors = None
    if errors is not None:
        print(errors)
        raise InvalidUsage(errors)
