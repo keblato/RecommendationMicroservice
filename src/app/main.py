@@ -7,7 +7,7 @@ from flask import Flask, jsonify, request
 #from flask import Flask
 
 from app.invalid_usage import InvalidUsage
-# from app.recommendations import genre_recommendations
+from app.recommendations import genre_recommendations
 from app.validation import validate_movieId
 app = Flask(__name__)
 
