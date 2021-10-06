@@ -5,7 +5,7 @@ import sys
 sys.path.append("/RecommendationMicroservice")
 
 from app.invalid_usage import InvalidUsage
-from app.recommendations import genre_recommendations
+#from app.recommendations import genre_recommendations
 from app.validation import validate_movieId
 app = Flask(__name__)
 
@@ -39,5 +39,5 @@ def handle_invalid_usage(error):
    return response
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)      
+    app.run()      
 
