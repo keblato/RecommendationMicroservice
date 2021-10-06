@@ -19,7 +19,7 @@ def index() -> str:
     #return jsonify({"message": "It Works"})
     return "Hello Updated World!"
         
-""" @app.route("/movieR", methods=['POST'])
+@app.route("/movieR", methods=['POST'])
 def hello() -> str:
    errors = None
    if errors is not None:
@@ -28,7 +28,7 @@ def hello() -> str:
    movieId = request.json.get("movieId", None)
    response = "a2" #{"recommendations": list(genre_recommendations(movieId))}
    return jsonify(response)
- """
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')      
