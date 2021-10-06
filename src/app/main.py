@@ -1,8 +1,10 @@
 # src/app/main.py:
+import sys
+sys.path
 from operator import ge
 from flask import Flask, jsonify, request
 import sys
-sys.path.append('')
+sys.path.append('/home/mobileApp/RecommendationMicroservice/src/app')
 
 from app.invalid_usage import InvalidUsage
 from app.recommendations import genre_recommendations
