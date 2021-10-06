@@ -1,6 +1,6 @@
 # src/app/main.py:
 import sys
-#sys.path.insert(0,'/home/ubuntu/RecommendationMicroservice/src')
+sys.path.insert(0,'/home/ubuntu/RecommendationMicroservice/src')
 
 # from operator import ge
 from flask import Flask, jsonify, request
