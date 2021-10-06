@@ -13,33 +13,6 @@ app = Flask(__name__)
 
 
 
-@app.route("/", methods=['GET'])
-def index() -> str:
-    # transform a dict into an application/json response 
-    return jsonify({"message": "It Works"})
-        
-@app.route("/movieR", methods=['POST'])
-def hello() -> str:
-   errors = validate_movieId(request)
-   if errors is not None:
-       print(errors)
-       raise InvalidUsage(errors)
-   movieId = request.json.get("movieId", None)
-   response ={"recommendations": list(genre_recommendations(movieId))}
-   return jsonify(response)
-
-@app.route("/movieGOOD", methods=['GET'])
-def movieGOOD() -> str:
-
-   return True
-
-
-@app.errorhandler(InvalidUsage)
-def handle_invalid_usage(error):
-   response = jsonify(error.to_dict())
-   response.status_code = error.status_code
-   return response
-
 movies=pd.read_csv('./data/movies.csv', sep=',', encoding = 'utf-8')
 tfvector= TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
 tfidf_matrix = tfvector.fit_transform(movies['genres'])
@@ -115,6 +88,33 @@ class InvalidUsage(Exception):
         rv = dict(self.payload or ())
         rv['message'] = self.message
         return rv
+
+@app.route("/", methods=['GET'])
+def index() -> str:
+    # transform a dict into an application/json response 
+    return jsonify({"message": "It Works"})
+        
+@app.route("/movieR", methods=['POST'])
+def hello() -> str:
+   errors = validate_movieId(request)
+   if errors is not None:
+       print(errors)
+       raise InvalidUsage(errors)
+   movieId = request.json.get("movieId", None)
+   response ={"recommendations": list(genre_recommendations(movieId))}
+   return jsonify(response)
+
+@app.route("/movieGOOD", methods=['GET'])
+def movieGOOD() -> str:
+
+   return True
+
+
+@app.errorhandler(InvalidUsage)
+def handle_invalid_usage(error):
+   response = jsonify(error.to_dict())
+   response.status_code = error.status_code
+   return response
 if __name__ == '__main__':
     app.run(host="0.0.0.0")      
 
