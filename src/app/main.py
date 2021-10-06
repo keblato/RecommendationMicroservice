@@ -7,7 +7,7 @@ import sys
 sys.path.insert(0,'/home/mobileApp/RecommendationMicroservice/src')
 
 from app.invalid_usage import InvalidUsage
-from app.recommendations import genre_recommendations
+#from app.recommendations import genre_recommendations
 from app.validation import validate_movieId
 app = Flask(__name__)
 
@@ -25,7 +25,7 @@ def hello() -> str:
        print(errors)
        raise InvalidUsage(errors)
    movieId = request.json.get("movieId", None)
-   response ={"recommendations": list(genre_recommendations(movieId))}
+   response = "a2" #{"recommendations": list(genre_recommendations(movieId))}
    return jsonify(response)
 
 @app.route("/movieGOOD", methods=['GET'])
