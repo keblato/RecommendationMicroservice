@@ -1,8 +1,8 @@
 # src/app/main.py:
 import sys
-sys.path
 # from operator import ge
-from flask import Flask, jsonify, request
+#from flask import Flask, jsonify, request
+from flask import Flask
 import sys
 sys.path.insert(0,'/home/mobileApp/RecommendationMicroservice/src')
 
@@ -16,7 +16,8 @@ app = Flask(__name__)
 @app.route("/", methods=['GET'])
 def index() -> str:
     # transform a dict into an application/json response 
-    return jsonify({"message": "It Works"})
+    #return jsonify({"message": "It Works"})
+    return "Hello Updated World!"
         
 """ @app.route("/movieR", methods=['POST'])
 def hello() -> str:
