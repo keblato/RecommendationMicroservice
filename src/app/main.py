@@ -26,7 +26,7 @@ def hello() -> str:
        print(errors)
        raise InvalidUsage(errors)
    movieId = request.json.get("movieId", None)
-   response = "a2" #{"recommendations": list(genre_recommendations(movieId))}
+   response = {"recommendations": list(genre_recommendations(movieId))}
    return jsonify(response)
 
 
