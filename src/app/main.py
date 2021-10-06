@@ -1,6 +1,10 @@
 # src/app/main.py:
 from operator import ge
 from flask import Flask, jsonify, request
+import sys
+sys.path.append('')
+
+import hello
 from app.invalid_usage import InvalidUsage
 from app.recommendations import genre_recommendations
 from app.validation import validate_movieId
