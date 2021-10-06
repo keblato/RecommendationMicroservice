@@ -1,14 +1,14 @@
 # src/app/main.py:
 import sys
 # from operator import ge
-#from flask import Flask, jsonify, request
-from flask import Flask
+from flask import Flask, jsonify, request
+#from flask import Flask
 import sys
 sys.path.insert(0,'/home/mobileApp/RecommendationMicroservice/src')
 
-#from app.invalid_usage import InvalidUsage
-#from app.recommendations import genre_recommendations
-#from app.validation import validate_movieId
+from app.invalid_usage import InvalidUsage
+from app.recommendations import genre_recommendations
+from app.validation import validate_movieId
 app = Flask(__name__)
 
 
