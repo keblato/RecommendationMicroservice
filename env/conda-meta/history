@@ -1,0 +1,44 @@
+==> 2021-10-05 14:22:23 <==
+# cmd: /Users/keblato/miniforge3/bin/conda create --prefix ./env python=3.9
+# conda version: 4.10.3
++conda-forge/noarch::pip-21.2.4-pyhd8ed1ab_0
++conda-forge/noarch::tzdata-2021c-he74cb21_0
++conda-forge/noarch::wheel-0.37.0-pyhd8ed1ab_1
++conda-forge/osx-arm64::ca-certificates-2021.5.30-h4653dfc_0
++conda-forge/osx-arm64::libzlib-1.2.11-hee7b306_1013
++conda-forge/osx-arm64::ncurses-6.2-h9aa5885_4
++conda-forge/osx-arm64::openssl-3.0.0-h3422bc3_1
++conda-forge/osx-arm64::python-3.9.7-hc0da0df_3_cpython
++conda-forge/osx-arm64::python_abi-3.9-2_cp39
++conda-forge/osx-arm64::readline-8.1-hedafd6a_0
++conda-forge/osx-arm64::setuptools-58.0.4-py39h2804cbe_2
++conda-forge/osx-arm64::sqlite-3.36.0-h72a2b83_2
++conda-forge/osx-arm64::tk-8.6.11-he1e0b03_1
++conda-forge/osx-arm64::xz-5.2.5-h642e427_1
++conda-forge/osx-arm64::zlib-1.2.11-hee7b306_1013
+# update specs: ['python=3.9']
+==> 2021-10-05 15:22:16 <==
+# cmd: /Users/keblato/miniforge3/bin/conda install -c conda-forge scikit-learn
+# conda version: 4.10.3
++conda-forge/noarch::joblib-1.0.1-pyhd8ed1ab_0
++conda-forge/noarch::threadpoolctl-3.0.0-pyh8a188c0_0
++conda-forge/osx-arm64::libblas-3.9.0-11_osxarm64_openblas
++conda-forge/osx-arm64::libcblas-3.9.0-11_osxarm64_openblas
++conda-forge/osx-arm64::libcxx-12.0.1-h168391b_0
++conda-forge/osx-arm64::libgfortran-5.0.0.dev0-11_0_1_hf114ba7_23
++conda-forge/osx-arm64::libgfortran5-11.0.1.dev0-hf114ba7_23
++conda-forge/osx-arm64::liblapack-3.9.0-11_osxarm64_openblas
++conda-forge/osx-arm64::libopenblas-0.3.17-openmp_h5dd58f0_1
++conda-forge/osx-arm64::llvm-openmp-12.0.1-hf3c4609_1
++conda-forge/osx-arm64::numpy-1.21.2-py39h1f3b974_0
++conda-forge/osx-arm64::scikit-learn-1.0-py39h12ba089_1
++conda-forge/osx-arm64::scipy-1.7.0-py39h5060c3b_0
+# update specs: ['scikit-learn']
+==> 2021-10-05 15:38:12 <==
+# cmd: /Users/keblato/miniforge3/bin/conda install pandas
+# conda version: 4.10.3
++conda-forge/noarch::python-dateutil-2.8.2-pyhd8ed1ab_0
++conda-forge/noarch::pytz-2021.3-pyhd8ed1ab_0
++conda-forge/noarch::six-1.16.0-pyh6c4a22f_0
++conda-forge/osx-arm64::pandas-1.3.3-py39h7f752ed_0
+# update specs: ['pandas']
