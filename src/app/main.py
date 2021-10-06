@@ -3,7 +3,7 @@ from operator import ge
 from flask import Flask, jsonify, request
 from mypkg.greetings import say_hello_to
 from app.invalid_usage import InvalidUsage
-from mypkg.recommendations import genre_recommendations
+from app.recommendations import genre_recommendations
 from app.validation import validate_movieId
 app = Flask(__name__)
 
@@ -26,7 +26,7 @@ def hello() -> str:
 
 @app.route("/movieGOOD", methods=['GET'])
 def movieGOOD() -> str:
-    
+
    return jsonify(response)
 
 
